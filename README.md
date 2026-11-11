@@ -60,3 +60,7 @@ cd server && npx @anthropic-ai/mcpb pack . ../dist/squarespace-builder.mcpb
 ```
 
 That builds the Claude Desktop bundle.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

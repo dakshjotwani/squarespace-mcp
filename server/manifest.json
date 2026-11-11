@@ -127,5 +127,10 @@
     "runtimes": {
       "node": ">=18.0.0"
     }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dakshjotwani/squarespace-mcp"
   }
 }
