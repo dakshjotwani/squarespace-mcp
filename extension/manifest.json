@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Squarespace MCP Bridge",
+  "version": "0.1.0",
+  "description": "Lets the Squarespace MCP server on this computer edit your Squarespace sites using your existing login.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtX/H/vUipHjMK7UKEC4NW+Kl58XTi+T8un6eHhaeISW1GG74crBxea9Zu9XuRiRd49OS65A+EJA9dl1bzY7LjKXQwaxBcRsv9tbJMBfNbdRPJgAK1EnTwwmtnbrU0SCvW8Ohsjxgi5pgSWs2GoKZy2zEDwK5nzLO1XNKVPYjbt8lJmLTEUVvDae8SVDRvRf/V9In+NkLOES3GIe4MKkmut79DVOeryUMbgTmBtkEIEVysG9D7c+x+aJ/73+wjAAAQUuGEZ/c6jzEBKhTjIZ07blzgMjLw7FfHKz4Hob1IlouAK5UCMl47VZf7yiMz4R365/K2hVhl3i9H4vj0A+zfQIDAQAB",
+  "background": { "service_worker": "background.js" },
+  "permissions": ["cookies", "alarms", "storage"],
+  "host_permissions": ["https://*.squarespace.com/*", "http://127.0.0.1/*"],
+  "action": { "default_title": "Squarespace MCP Bridge", "default_popup": "popup.html" }
+}

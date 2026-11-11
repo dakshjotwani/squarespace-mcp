@@ -1,0 +1,131 @@
+{
+  "manifest_version": "0.2",
+  "name": "squarespace-builder",
+  "display_name": "Squarespace Builder",
+  "version": "0.1.0",
+  "description": "Build and edit Squarespace 7.1 sites from Claude Design exports, using your Chrome login.",
+  "long_description": "Turns Claude Design exports into native Squarespace 7.1 sections, blocks and site styles through the editor's own API. Requires the Squarespace MCP Bridge Chrome extension and being logged in to Squarespace in Chrome. Every change is snapshotted and can be undone.",
+  "author": {
+    "name": "Daksh"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {
+        "SQS_SITE": "${user_config.site}"
+      }
+    }
+  },
+  "user_config": {
+    "site": {
+      "type": "string",
+      "title": "Default Squarespace site",
+      "description": "The site you work on most, e.g. my-site or my-site.squarespace.com. You can still name another site in chat.",
+      "required": false,
+      "default": ""
+    }
+  },
+  "tools": [
+    {
+      "name": "status"
+    },
+    {
+      "name": "read_design"
+    },
+    {
+      "name": "list_pages"
+    },
+    {
+      "name": "get_page"
+    },
+    {
+      "name": "build_sections"
+    },
+    {
+      "name": "update_section"
+    },
+    {
+      "name": "update_block"
+    },
+    {
+      "name": "delete_sections"
+    },
+    {
+      "name": "create_page"
+    },
+    {
+      "name": "set_navigation_order"
+    },
+    {
+      "name": "upload_image"
+    },
+    {
+      "name": "get_site_styles"
+    },
+    {
+      "name": "set_palette"
+    },
+    {
+      "name": "set_theme_colors"
+    },
+    {
+      "name": "set_fonts"
+    },
+    {
+      "name": "set_button_style"
+    },
+    {
+      "name": "get_custom_css"
+    },
+    {
+      "name": "set_custom_css"
+    },
+    {
+      "name": "get_header_footer"
+    },
+    {
+      "name": "update_header"
+    },
+    {
+      "name": "build_footer"
+    },
+    {
+      "name": "list_posts"
+    },
+    {
+      "name": "create_blog_post"
+    },
+    {
+      "name": "update_blog_post"
+    },
+    {
+      "name": "set_post_image"
+    },
+    {
+      "name": "list_snapshots"
+    },
+    {
+      "name": "restore_snapshot"
+    },
+    {
+      "name": "describe_block"
+    },
+    {
+      "name": "api_request"
+    }
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}

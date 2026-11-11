@@ -1,0 +1,5 @@
+[
+ {"tool": "status", "args": {"site": "your-site"}},
+ {"tool": "list_pages", "args": {"site": "your-site"}},
+ {"tool": "get_site_styles", "args": {"site": "your-site"}, "max": 1500}
+]
